@@ -24,7 +24,7 @@
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/ageViewId"
+        android:id="@+id/txtEditEdad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Edad actual"
@@ -33,7 +33,7 @@
         android:inputType="number"
         />
 
-    <EditText
+    <TextView
         android:id="@+id/resultadoViewId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,6 +43,7 @@
         />
 
     <Button
+        android:id="@+id/btnCalcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Calcular"
