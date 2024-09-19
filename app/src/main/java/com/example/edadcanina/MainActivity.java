@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,12 +29,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String edad = editText.getText().toString();
                 if (edad.isEmpty()){
-                    return;
+                    Toast.makeText(MainActivity.this,"Ingrese un valor",Toast.LENGTH_LONG).show();
+                }else {
+                    int edadInt = Integer.parseInt(edad);
+                    int res = edadInt * 7;
+                    String resStr = "La edad de tu perro es: "+ res+" años";
+                    textView.setText(resStr);
                 }
-                int edadInt = Integer.parseInt(edad);
-                int res = edadInt * 7;
-                String resStr = "La edad de tu perro es: "+ res+" años";
-                textView.setText(resStr);
             }
         });
     }
