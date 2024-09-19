@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String edad = editText.getText().toString();
+                if (edad.isEmpty()){
+                    return;
+                }
                 int edadInt = Integer.parseInt(edad);
                 int res = edadInt * 7;
                 String resStr = "La edad de tu perro es: "+ res+" años";
